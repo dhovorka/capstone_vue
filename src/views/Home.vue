@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to THE JUNGLE" /> -->
+    <!-- <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to THE JUNGLE" /> -->
     <h1>All Tournaments</h1>
     <div v-for="tournament in tournaments">
       <h2>{{ tournament.name }}</h2>
