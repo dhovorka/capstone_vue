@@ -5,9 +5,10 @@
       <h2>{{ tournament.name }}</h2>
       <p>Location: {{ tournament.location }}</p>
       <p>Information: {{ tournament.description }}</p>
+
       <!-- Looking to show all comments for each tournament -->
-      <!-- <div v-for="comment in comments">
-        <p>Comments: {{ comment.content }}</p> -->
+      <!-- <div v-for="comment in comments"> -->
+      <p>Comments: {{ tournament.id.comments }}</p>
     </div>
   </div>
   <!-- </div> -->
@@ -26,9 +27,6 @@ export default {
   created: function() {
     axios.get("/api/tournaments").then(response => {
       this.tournaments = response.data;
-    });
-    axios.get("/api/comments").then(response => {
-      this.comments = response.data;
     });
   },
   methods: {}

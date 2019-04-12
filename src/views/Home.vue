@@ -7,6 +7,10 @@
       <h2>{{ tournament.name }}</h2>
       <p>Location: {{ tournament.location }}</p>
       <p>Information: {{ tournament.description }}</p>
+      <p>Comments: {{ tournament.tournament_comments.length }}</p>
+      <div v-for="comment in tournament.tournament_comments">
+        {{ comment.content }}
+      </div>
     </div>
   </div>
 </template>
