@@ -5,13 +5,15 @@
       <h2>{{ tournament.name }}</h2>
       <p>Location: {{ tournament.location }}</p>
       <p>Information: {{ tournament.description }}</p>
-
+      <router-link v-bind:to="`/tournaments/${tournament.id}`"> View Comments</router-link>
       <!-- Looking to show all comments for each tournament -->
       <!-- <div v-for="comment in comments"> -->
-      <p>Comments: {{ tournament.id.comments }}</p>
+      <!-- <p>Comments: {{ tournament.id.comments }}</p>
+      <div v-for="comment in tournament.tournament_comments">
+        {{ comment.content }}
+        {{ comment.user_id }} -->
     </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <script>

@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Index from "./views/TournamentsIndex.vue";
+import TournamentsShow from "./views/TournamentsShow.vue";
 
 Vue.use(Router);
 
@@ -13,6 +14,11 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/tournaments/:id",
+      name: "tournaments-show",
+      component: TournamentsShow
     },
     {
       path: "/tournaments",

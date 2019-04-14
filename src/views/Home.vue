@@ -7,10 +7,12 @@
       <h2>{{ tournament.name }}</h2>
       <p>Location: {{ tournament.location }}</p>
       <p>Information: {{ tournament.description }}</p>
-      <p>Comments: {{ tournament.tournament_comments.length }}</p>
+      <router-link v-bind:to="`/tournaments/${tournament.id}`"> View Comments</router-link>
+      <button v-on:click="showTournament(tournament)">Show here</button>
+      <!--  <button v-on:click="showTournament(tournament)">Show Comments</button> -->
+      <!-- <p>Comments: {{ tournament.tournament_comments.length }}</p>
       <div v-for="comment in tournament.tournament_comments">
-        {{ comment.content }}
-      </div>
+        {{ comment.content }} -->
     </div>
   </div>
 </template>
