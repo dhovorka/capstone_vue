@@ -7,6 +7,7 @@
 
     <!-- Looking to show all comments for each tournament -->
     <!-- <div v-for="comment in comments"> -->
+    <router-link to="/">Back to All Tournaments</router-link>
     <p>Comments: {{ tournament.id.comments }}</p>
     <div v-for="comment in tournament.tournament_comments">
       {{ comment.content }}
