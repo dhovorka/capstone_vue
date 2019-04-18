@@ -11,7 +11,7 @@
     <div>Comment: <input type="text" v-model="newCommentContent" /></div>
 
     <button v-on:click="createComment()">Create Comment</button>
-    <p>Comments: {{ tournament.id.comments }}</p>
+    <p>Comments: {{ tournament.tournament_comments }}</p>
     <div v-for="comment in tournament.tournament_comments">
       {{ comment.content }}
     </div>
@@ -24,9 +24,10 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      tournament: [],
+      tournament: {},
       currentTournament: "",
-      current_tournament_id: ""
+      current_tournament_id: "",
+      newCommentContent: ""
     };
   },
   created: function() {
@@ -38,8 +39,9 @@ export default {
     createComment: function() {
       var params = {
         content: this.newCommentContent,
-        tournament_id: this.tournament_id
+        tournament_id: this.tournament.id
       };
+      // console.log("createComment", params);
       axios.post("/api/comments", params).then(response => {
         this.$router.push("/");
       });
