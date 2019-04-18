@@ -8,6 +8,8 @@
     <!-- Looking to show all comments for each tournament -->
     <!-- <div v-for="comment in comments"> -->
     <router-link to="/">Back to All Tournaments</router-link> <br />
+    <div>Comment: <input type="text" v-model="newCommentContent" /></div>
+
     <button v-on:click="createComment()">Create Comment</button>
     <p>Comments: {{ tournament.id.comments }}</p>
     <div v-for="comment in tournament.tournament_comments">
@@ -24,7 +26,6 @@ export default {
     return {
       tournament: [],
       currentTournament: "",
-      current_user_id: "",
       current_tournament_id: ""
     };
   },
@@ -36,15 +37,11 @@ export default {
   methods: {
     createComment: function() {
       var params = {
-        content: this.newCommentContentContent,
-        user_id: current_user_id,
+        content: this.newCommentContent,
         tournament_id: this.tournament_id
       };
       axios.post("/api/comments", params).then(response => {
-        this.comments.push(response.data);
-        this.newCommentContent = "";
-        this.newCommentUser_id = current_user;
-        this.newCommentTournament_id = this.tournament_id;
+        this.$router.push("/");
       });
     },
     updateTournament: function(tournament) {
