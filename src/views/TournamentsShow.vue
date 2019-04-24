@@ -11,10 +11,12 @@
     <div>Comment: <input type="text" v-model="newCommentContent" /></div>
 
     <button v-on:click="createComment()">Create Comment</button>
-    <p>Comments: {{ tournament.tournament_comments }}</p>
+    <br />
     <div v-for="comment in tournament.tournament_comments">
-      {{ comment.content }}
+      {{ comment.content }} ||
+      {{ comment.created_at }}
     </div>
+    <router-link to="/">Back to All Tournaments</router-link>
   </div>
 </template>
 
