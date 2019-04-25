@@ -72,7 +72,7 @@
     </header>
 
     <div id="nav">
-      <router-link to="http://localhost:8080/">Home</router-link>
+      <!-- <router-link to="/">Home</router-link> -->
       <!-- <router-link to="/about">About</router-link> -->
       <aside id="fh5co-hero" class="js-fullheight">
         <div class="flexslider js-fullheight">
@@ -98,7 +98,7 @@
                 <div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
                   <div class="slider-text-inner">
                     <div class="desc">
-                      <h2>U.S. Open</h2>
+                      <h2>U.S.OPEN</h2>
                       <p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@
           <a href="/tournaments/4">
             <img src="http://www.tenniskeys.com/images/cincinnati/cin33.jpg" alt="Project" class="img-responsive" />
             <div class="desc text-center">
-              <h2>U.S.OPEN</h2>
+              <h2>CINCINNATI MASTERS</h2>
             </div>
           </a>
         </div>
