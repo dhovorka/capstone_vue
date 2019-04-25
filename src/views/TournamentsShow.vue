@@ -1,5 +1,5 @@
 <template>
-  <div class="tournaments-show">
+  <div class="tournaments-show container">
     <h2>Name: {{ tournament.name }}</h2>
     <h2>{{ tournament.name }}</h2>
     <p>Location: {{ tournament.location }}</p>

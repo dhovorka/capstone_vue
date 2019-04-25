@@ -5,7 +5,7 @@
         <div class="nav-header">
           <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
           <h1 id="fh5co-logo">
-            <a href="index.html"><i class="icon-home2"></i>Beam</a>
+            <a href="index.html"><i class="icon-home2"></i>Tennis</a>
           </h1>
           <!-- START #fh5co-menu-wrap -->
           <nav id="fh5co-menu-wrap" role="navigation">
@@ -13,9 +13,9 @@
               <li>
                 <a class="active" href="index.html">Home</a>
               </li>
-              <li><a href="work.html">Projects</a></li>
+              <!-- <li><a href="work.html">Projects</a></li> -->
               <li>
-                <a href="services.html" class="fh5co-sub-ddown">Services</a>
+                <a href="services.html" class="fh5co-sub-ddown">Tournaments</a>
                 <ul class="fh5co-sub-menu">
                   <li><a href="left-sidebar.html">Web Development</a></li>
                   <li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
@@ -72,45 +72,47 @@
     </header>
 
     <div id="nav">
-      <router-link to="/">Home</router-link>
+      <router-link to="http://localhost:8080/">Home</router-link>
       <!-- <router-link to="/about">About</router-link> -->
       <aside id="fh5co-hero" class="js-fullheight">
         <div class="flexslider js-fullheight">
           <ul class="slides">
-            <li style="background-image: url(images/slide_1.jpg);">
+            <li
+              style="background-image: url(https://www.eseats.com/sports%20images/French%20Open/Borotra-seating.jpg);"
+            >
               <div class="overlay-gradient"></div>
               <div class="container">
                 <div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
                   <div class="slider-text-inner">
                     <div class="desc">
-                      <h2>We shape our buildings; thereafter they shape Us.</h2>
+                      <h2>French Open</h2>
+                      <p><a href="/tournaments/2" class="btn btn-primary btn-outline">View Details</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li style="background-image: url(https://www.roadtrips.com/wp-content/uploads/2016/10/us-open.jpg);">
+              <div class="overlay-gradient"></div>
+              <div class="container">
+                <div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
+                  <div class="slider-text-inner">
+                    <div class="desc">
+                      <h2>U.S. Open</h2>
                       <p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li style="background-image: url(images/slide_2.jpg);">
+            <li style="background-image: url(https://www.roadtrips.com/wp-content/uploads/2016/10/tickets.jpg);">
               <div class="overlay-gradient"></div>
               <div class="container">
                 <div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
                   <div class="slider-text-inner">
                     <div class="desc">
-                      <h2>Architecture is a visual art, and the buildings speak for themselves.</h2>
-                      <p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li style="background-image: url();">
-              <div class="overlay-gradient"></div>
-              <div class="container">
-                <div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-                  <div class="slider-text-inner">
-                    <div class="desc">
-                      <h2>Architecture begins where engineering ends.</h2>
-                      <p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
+                      <h2>Wimbledon</h2>
+                      <p><a href="/tournaments/3" class="btn btn-primary btn-outline">View Details</a></p>
                     </div>
                   </div>
                 </div>
@@ -122,25 +124,33 @@
       <div id="fh5co-section">
         <div class="grid-project-section">
           <a href="#">
-            <img src="images/project-1.jpg" alt="Project" class="img-responsive" />
+            <img
+              src="https://www.tennisworldusa.org/imgb/58280/atp-monte-carlo-rolex-masters-preview-who-will-win-survey-inside.jpg"
+              alt="Project"
+              class="img-responsive"
+            />
             <div class="desc text-center">
-              <h2>Ohio Building</h2>
+              <h2>MONTE CARLO MASTERS</h2>
             </div>
           </a>
         </div>
         <div class="grid-project-section">
           <a href="#">
-            <img src="images/project-2.jpg" alt="Project" class="img-responsive" />
+            <img
+              src="https://bnpparibasopen.com/wp-content/uploads/2018/01/2018-group-mini.jpg"
+              alt="Project"
+              class="img-responsive"
+            />
             <div class="desc text-center">
-              <h2>Bridge of London</h2>
+              <h2>INDIAN WELLS</h2>
             </div>
           </a>
         </div>
         <div class="grid-project-section">
-          <a href="#">
-            <img src="images/project-3.jpg" alt="Project" class="img-responsive" />
+          <a href="/tournaments/4">
+            <img src="http://www.tenniskeys.com/images/cincinnati/cin33.jpg" alt="Project" class="img-responsive" />
             <div class="desc text-center">
-              <h2>New York City</h2>
+              <h2>U.S.OPEN</h2>
             </div>
           </a>
         </div>
@@ -155,21 +165,20 @@
             <div class="col-md-3">
               <h3 class="section-title">About Us</h3>
               <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.
+                Do you love tennis? Hey, so do we. The only thing we might love more is traveling. Our passion lies at
+                the crossroads of these two hobbies.
               </p>
             </div>
 
             <div class="col-md-3">
               <h3 class="section-title">Our Services</h3>
               <ul>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Branding &amp; Identity</a></li>
-                <li><a href="#">Free HTML5</a></li>
-                <li><a href="#">HandCrafted Templates</a></li>
-                <li><a href="#">Free Bootstrap Template</a></li>
-                <li><a href="#">Free HTML5 Template</a></li>
-                <li><a href="#">Free HTML5 &amp; CSS3 Template</a></li>
+                <li><a href="#">Australian Open</a></li>
+                <li><a href="#">Wimbledon &amp; Identity</a></li>
+                <li><a href="#">French Open</a></li>
+                <li><a href="#">U.S. Open</a></li>
+                <li><a href="#">Indian Wells</a></li>
+                <li><a href="#">Monte Carlo Masters</a></li>
                 <li><a href="#">HandCrafted Templates</a></li>
               </ul>
             </div>
@@ -214,7 +223,7 @@
                 <a href="#"><i class="icon-youtube"></i></a>
               </p>
               <p>
-                &copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br />Made with
+                &copy; 2016 Free Html5 <a href="#">Tennis</a>. All Rights Reserved. <br />Made with
                 <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo
                 Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a
                   href="https://pexels.com/"
