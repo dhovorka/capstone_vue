@@ -3,7 +3,7 @@
     <h2>{{ tournament.name }}</h2>
     <p>{{ tournament.location }}</p>
     <p>{{ tournament.description }}</p>
-    <router-link to="/">Back to All Tournaments</router-link> <br />
+    <!-- <router-link to="/">Back to All Tournaments</router-link> <br /> -->
     <div>Comment: <input type="text" v-model="newCommentContent" /></div>
 
     <button v-on:click="createComment()">Create Comment</button>
@@ -13,6 +13,12 @@
       {{ comment.created_at }}
     </div>
     <router-link to="/tournaments">Back to All Tournaments</router-link>
+    <div
+      data-skyscanner-widget="InsiderTipsWidget"
+      data-tip-type="day_price"
+      data-origin-name="'Chicago'"
+      data-destination-name="'Paris'"
+    ></div>
   </div>
 </template>
 
@@ -25,7 +31,8 @@ export default {
       tournament: {},
       currentTournament: "",
       current_tournament_id: "",
-      newCommentContent: ""
+      newCommentContent: "",
+      testCityOne: ""
     };
   },
   created: function() {
@@ -41,7 +48,7 @@ export default {
       };
       // console.log("createComment", params);
       axios.post("/api/comments", params).then(response => {
-        this.$router.push("/");
+        this.$router.push("/tournaments");
       });
     },
     updateTournament: function(tournament) {

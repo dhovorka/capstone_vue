@@ -6,6 +6,8 @@ import TournamentsShow from "./views/TournamentsShow.vue";
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
+import About from "./views/About.vue";
+import Contact from "./views/Contact.vue";
 
 Vue.use(Router);
 
@@ -17,6 +19,16 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Contact
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: About
     },
     {
       path: "/tournaments/:id",
