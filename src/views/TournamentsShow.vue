@@ -1,12 +1,8 @@
 <template>
   <div class="tournaments-show container">
-    <h2>Name: {{ tournament.name }}</h2>
     <h2>{{ tournament.name }}</h2>
-    <p>Location: {{ tournament.location }}</p>
-    <p>Information: {{ tournament.description }}</p>
-
-    <!-- Looking to show all comments for each tournament -->
-    <!-- <div v-for="comment in comments"> -->
+    <p>{{ tournament.location }}</p>
+    <p>{{ tournament.description }}</p>
     <router-link to="/">Back to All Tournaments</router-link> <br />
     <div>Comment: <input type="text" v-model="newCommentContent" /></div>
 
@@ -16,7 +12,7 @@
       {{ comment.content }} ||
       {{ comment.created_at }}
     </div>
-    <router-link to="/">Back to All Tournaments</router-link>
+    <router-link to="/tournaments">Back to All Tournaments</router-link>
   </div>
 </template>
 
