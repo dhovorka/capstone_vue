@@ -1,5 +1,10 @@
 <template>
   <div class="signup">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="container">
       <form v-on:submit.prevent="submit()">
         <h1>Signup</h1>

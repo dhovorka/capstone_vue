@@ -501,9 +501,9 @@
 .icon-film:before {
     content: "\eabc";
 }
-.icon-home2:before {
+/*.icon-home2:before {
     content: "\eabd";
-}
+}*/
 .icon-add-to-list:before {
     content: "\e901";
 }

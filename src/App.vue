@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> || <router-link to="/tournaments">Tournaments</router-link> ||
       <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a>
       <header id="fh5co-header-section">
         <div class="container">

@@ -53,7 +53,7 @@ export default {
       };
       // console.log("createComment", params);
       axios.post("/api/comments", params).then(response => {
-        this.$router.push("/tournaments");
+        this.$router.push("/tournaments/`${}`");
       });
     },
     updateTournament: function(tournament) {
