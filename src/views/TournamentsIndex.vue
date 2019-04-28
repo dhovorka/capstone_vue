@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <h1>All Tournaments</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div v-for="tournament in tournaments">
       <h2>{{ tournament.name }}</h2>
       <p>Location: {{ tournament.location }}</p>

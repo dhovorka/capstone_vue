@@ -1,5 +1,10 @@
 <template>
   <div class="tournaments-show container">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <h2>{{ tournament.name }}</h2>
     <p>{{ tournament.location }}</p>
     <p>{{ tournament.description }}</p>
@@ -17,7 +22,7 @@
       data-skyscanner-widget="InsiderTipsWidget"
       data-tip-type="day_price"
       data-origin-name="'Chicago'"
-      data-destination-name="'Paris'"
+      data-destination-name="'Melbourne'"
     ></div>
   </div>
 </template>

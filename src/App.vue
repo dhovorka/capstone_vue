@@ -3,6 +3,40 @@
     <div id="nav">
       <router-link to="/">Home</router-link> || <router-link to="/tournaments">Tournaments</router-link> ||
       <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a>
+      <header id="fh5co-header-section">
+        <div class="container">
+          <!-- <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a> -->
+
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo">
+              <a href="/"><i class="icon-home2"></i>Tennis|FINDR</a>
+            </h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <li><a class="active" href="/">Home</a></li>
+                <li>
+                  <a href="/tournaments" class="fh5co-sub-ddown">Tournaments</a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="/tournaments/1">Australian Open</a></li>
+                    <li><a href="/tournaments/2">French Open</a></li>
+                    <li>
+                      <a href="/tournaments/3" class="fh5co-sub-ddown">Wimbledon</a>
+                    </li>
+                    <li><a href="/tournaments/4">U.S.Open</a></li>
+                    <li><a href="/tournaments/5">Indian Wells</a></li>
+                    <li><a href="/tournaments/6">Monte Carlo Masters</a></li>
+                    <li><a href="/tournaments/16">Cincinnati Masters</a></li>
+                  </ul>
+                </li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
 
       <router-view />
 
