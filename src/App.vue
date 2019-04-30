@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a>
+      <!-- <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a> -->
       <header id="fh5co-header-section">
         <div class="container">
           <!-- <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a> -->

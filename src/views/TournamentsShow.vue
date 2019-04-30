@@ -5,6 +5,27 @@
     <br />
     <br />
     <br />
+    <br />
+    <aside id="fh5co-hero" class="js-fullheight">
+      <div class="flexslider js-fullheight">
+        <ul class="slides">
+          <li style="background-image: url(images/slide_1.jpg);">
+            <div class="overlay-gradient"></div>
+            <div class="container">
+              <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                <div class="slider-text-inner desc">
+                  <h2 class="heading-section">{{ tournament.name }}</h2>
+                  <p class="fh5co-lead">
+                    {{ tournament.description }}
+                    <a href="https://ausopen.com/" target="_blank">AO.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
     <h2>{{ tournament.name }}</h2>
     <p>{{ tournament.location }}</p>
     <p>{{ tournament.description }}</p>
@@ -53,7 +74,7 @@ export default {
       };
       // console.log("createComment", params);
       axios.post("/api/comments", params).then(response => {
-        this.$router.push("/tournaments/`${}`");
+        this.$router.push("/");
       });
     },
     updateTournament: function(tournament) {

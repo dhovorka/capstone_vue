@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a>
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to THE JUNGLE" /> -->
     <!--  <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a> -->
