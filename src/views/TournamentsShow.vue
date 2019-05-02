@@ -1,5 +1,6 @@
 <template>
   <div class="tournaments-show container">
+    <div id="map"></div>
     <br />
     <br />
     <br />
@@ -17,7 +18,7 @@
                   <h2 class="heading-section">{{ tournament.name }}</h2>
                   <p class="fh5co-lead">
                     {{ tournament.description }}
-                    <a href="https://ausopen.com/" target="_blank">AO.com</a>
+                    <a :href="`${tournament.website}`" target="_blank"><br />{{ tournament.website }}</a>
                   </p>
                 </div>
               </div>
@@ -39,16 +40,18 @@
       {{ comment.created_at }}
     </div>
     <router-link to="/tournaments">Back to All Tournaments</router-link>
-    <div
+    <!-- <div
       data-skyscanner-widget="InsiderTipsWidget"
       data-tip-type="day_price"
       data-origin-name="'Chicago'"
       data-destination-name="'Melbourne'"
-    ></div>
+    ></div> -->
   </div>
 </template>
 
 <script>
+/* global mapboxgl */
+
 import axios from "axios";
 
 export default {
@@ -61,9 +64,33 @@ export default {
       testCityOne: ""
     };
   },
-  created: function() {
+  mounted: function() {
     axios.get("/api/tournaments/" + this.$route.params.id).then(response => {
       this.tournament = response.data;
+
+      mapboxgl.accessToken = "";
+
+      var monument = this.tournament.coordinates.split(", ");
+      console.log(monument);
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: monument,
+        zoom: 13
+      });
+
+      // create the popup
+      var popup = new mapboxgl.Popup({ offset: 25 }).setText("Tournament Site");
+
+      // create DOM element for the marker
+      var el = document.createElement("div");
+      el.id = "marker";
+
+      // create the marker
+      new mapboxgl.Marker(el)
+        .setLngLat(monument)
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
     });
   },
   methods: {

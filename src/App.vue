@@ -124,4 +124,30 @@
   </div>
 </template>
 
-<style></style>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  bottom: 100;
+  height: 50%;
+  width: 100%;
+}
+#marker {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNyThroJwmYgLACyJR5G8k5yXxobrJyijSrcq_f9Gdt5IGvCH");
+  background-size: cover;
+  top: 50;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+</style>
