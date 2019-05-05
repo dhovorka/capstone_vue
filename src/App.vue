@@ -96,25 +96,7 @@
             </div>
             <div class="row copy-right">
               <div class="col-md-6 col-md-offset-3 text-center">
-                <p class="fh5co-social-icons">
-                  <!-- <a href="#"><i class="icon-twitter2"></i></a>
-                  <a href="#"><i class="icon-facebook2"></i></a>
-                  <a href="#"><i class="icon-instagram"></i></a>
-                  <a href="#"><i class="icon-dribbble2"></i></a>
-                  <a href="#"><i class="icon-youtube"></i></a> -->
-                </p>
-                <p>
-                  <!-- &copy; 2016 Free Html5 <a href="#">Tennis</a>. All Rights Reserved. <br />Made with
-                  <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo
-                  Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a
-                    href="https://pexels.com/"
-                    target="_blank" -->
-                  <!-- >
-                    Pexels</a
-                  >
-                  <br />
-                  Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a> -->
-                </p>
+                <p class="fh5co-social-icons"></p>
               </div>
             </div>
           </div>
@@ -131,7 +113,7 @@ body {
 }
 #map {
   position: absolute;
-  top: 1000px;
+  top: 125%;
   left: 0;
   bottom: 100;
   height: 50%;
@@ -148,6 +130,6 @@ body {
 }
 
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 175px;
 }
 </style>

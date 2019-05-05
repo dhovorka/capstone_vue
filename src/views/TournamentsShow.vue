@@ -10,7 +10,7 @@
     <aside id="fh5co-hero" class="js-fullheight">
       <div class="flexslider js-fullheight">
         <ul class="slides">
-          <li style="background-image: url(https://www.roadtrips.com/wp-content/uploads/2016/10/tickets.jpg);">
+          <li :style="{ backgroundImage: 'url(' + tournament.image + ')' }">
             <div class="overlay-gradient"></div>
             <div class="container">
               <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
@@ -18,8 +18,10 @@
                   <h2 class="heading-section">{{ tournament.name }}</h2>
                   <p class="fh5co-lead">
                     {{ tournament.description }}
-                    <a :href="`${tournament.website}`" target="_blank"><br />{{ tournament.website }}</a>
                   </p>
+
+                  <p>{{ tournament.location }}</p>
+                  <a :href="tournament.website" target="_blank"><br />{{ tournament.website }}</a>
                 </div>
               </div>
             </div>
@@ -27,17 +29,35 @@
         </ul>
       </div>
     </aside>
-    <h2>{{ tournament.name }}</h2>
-    <p>{{ tournament.location }}</p>
-    <p>{{ tournament.description }}</p>
     <!-- <router-link to="/">Back to All Tournaments</router-link> <br /> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div>Comment: <input type="text" v-model="newCommentContent" /></div>
 
     <button v-on:click="createComment()">Create Comment</button>
     <br />
     <div v-for="comment in tournament.tournament_comments">
-      {{ comment.content }} ||
       {{ comment.created_at }}
+      {{ comment.content }}
+      <br />
+      <br />
     </div>
     <router-link to="/tournaments">Back to All Tournaments</router-link>
     <!-- <div

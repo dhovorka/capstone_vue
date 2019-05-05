@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a>
+    <!-- <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a> -->
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to THE JUNGLE" /> -->
     <!--  <a href="/signup">Signup</a> || <a href="/login">Login</a> || <a href="/logout">Logout</a> -->
@@ -108,11 +108,11 @@
           <div id="fh5co-section">
             <div class="grid-project-section">
               <a href="/tournaments/6">
-                <img
+                <!-- <img
                   src="https://www.tennisworldusa.org/imgb/58280/atp-monte-carlo-rolex-masters-preview-who-will-win-survey-inside.jpg"
                   alt="Project"
                   class="img-responsive"
-                />
+                /> -->
                 <div class="desc text-center">
                   <h2>MONTE CARLO MASTERS</h2>
                 </div>
@@ -120,11 +120,11 @@
             </div>
             <div class="grid-project-section">
               <a href="/tournaments/5">
-                <img
+                <!-- <img
                   src="https://bnpparibasopen.com/wp-content/uploads/2018/01/2018-group-mini.jpg"
                   alt="Project"
                   class="img-responsive"
-                />
+                /> -->
                 <div class="desc text-center">
                   <h2>INDIAN WELLS</h2>
                 </div>
@@ -132,11 +132,11 @@
             </div>
             <div class="grid-project-section">
               <a href="/tournaments/16">
-                <img
+                <!-- <img
                   src="https://media.bizj.us/view/img/11011677/img8437*1200xx3600-2025-0-188.jpg"
                   alt="Project"
                   class="img-responsive"
-                />
+                /> -->
                 <div class="desc text-center">
                   <h2>CINCINNATI MASTERS</h2>
                 </div>
