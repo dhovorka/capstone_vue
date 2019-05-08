@@ -16,7 +16,7 @@ body {
   line-height: 1.8;
   font-size: 16px;
   background: #fff;
-  color: #848484;
+  color: #0a0a0a;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -379,7 +379,7 @@ figure {
   letter-spacing: 1px;
 }
 .sf-menu a:hover, .sf-menu a:focus, .sf-menu a.active {
-  background: #e6e6e6 !important;
+  background: #b35c12 !important;
   color: #000 !important;
 }
 

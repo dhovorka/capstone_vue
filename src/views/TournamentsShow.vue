@@ -17,11 +17,10 @@
                 <div class="slider-text-inner desc">
                   <h2 class="heading-section">{{ tournament.name }}</h2>
                   <p class="fh5co-lead">
+                    {{ tournament.location }} <br />
                     {{ tournament.description }}
+                    <a :href="tournament.website" target="_blank"><br />{{ tournament.website }}</a>
                   </p>
-
-                  <p>{{ tournament.location }}</p>
-                  <a :href="tournament.website" target="_blank"><br />{{ tournament.website }}</a>
                 </div>
               </div>
             </div>
@@ -48,24 +47,20 @@
     <br />
     <br />
     <br />
-    <br />
     <div>Comment: <input type="text" v-model="newCommentContent" /></div>
 
     <button v-on:click="createComment()">Create Comment</button>
     <br />
-    <div v-for="comment in tournament.tournament_comments">
-      {{ comment.created_at }}
+    Search previous comments:
+    <input type="text" v-model="searchFilter" />
+    <br />
+    <div v-for="comment in filterBy(tournament.tournament_comments, searchFilter, 'content')">
+      <!-- {{ comment.created_at }} -->
       {{ comment.content }}
       <br />
       <br />
     </div>
     <router-link to="/tournaments">Back to All Tournaments</router-link>
-    <!-- <div
-      data-skyscanner-widget="InsiderTipsWidget"
-      data-tip-type="day_price"
-      data-origin-name="'Chicago'"
-      data-destination-name="'Melbourne'"
-    ></div> -->
   </div>
 </template>
 
@@ -73,15 +68,24 @@
 /* global mapboxgl */
 
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       tournament: {},
       currentTournament: "",
       current_tournament_id: "",
       newCommentContent: "",
-      testCityOne: ""
+      testCityOne: "",
+      searchFilter: ""
+      // points_of_interest: {
+      //   1: ["", "", "", ""],
+      //   2: [],
+      //   3: [],
+      //   sortAttribute: "title",
+      //   sortAscending: 1,
     };
   },
   mounted: function() {
@@ -121,7 +125,9 @@ export default {
       };
       // console.log("createComment", params);
       axios.post("/api/comments", params).then(response => {
-        this.$router.push("/");
+        this.comments.push(response.data);
+        this.newCommentContent;
+        // this.$router.push("/");
       });
     },
     updateTournament: function(tournament) {

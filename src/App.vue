@@ -65,12 +65,12 @@
               </div>
 
               <div class="col-md-3">
-                <h3 class="section-title">Our Address</h3>
+                <h3 class="section-title">Contact Information</h3>
                 <ul class="contact-info">
-                  <li><i class="icon-map2"></i> Address here</li>
+                  <li><i class="icon-map2"></i>1 N Dearborn Ave, Chicago IL, 60601</li>
                   <li><i class="icon-phone2"></i>+ 555-555-5555</li>
-                  <li><i class="icon-envelope2"></i><a href="#">info@yoursite.com</a></li>
-                  <li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
+                  <li><i class="icon-envelope2"></i><a href="#">info@tennisfindr.com</a></li>
+                  <li><i class="icon-globe2"></i><a href="#">www.tennisfindr.com</a></li>
                 </ul>
               </div>
               <div class="col-md-3">
@@ -130,6 +130,6 @@ body {
 }
 
 .mapboxgl-popup {
-  max-width: 175px;
+  max-width: 100%;
 }
 </style>
