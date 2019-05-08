@@ -119,6 +119,7 @@ export default {
   },
   methods: {
     createComment: function() {
+      location.reload(true);
       var params = {
         content: this.newCommentContent,
         tournament_id: this.tournament.id
