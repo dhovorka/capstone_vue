@@ -47,16 +47,20 @@
     <br />
     <br />
     <br />
-    <div>Comment: <input type="text" v-model="newCommentContent" /></div>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="newCommentContent"></textarea>
 
-    <button v-on:click="createComment()">Create Comment</button>
+    <button type="button" class="btn btn-info active .btn-block" v-on:click="createComment()">Add Your Comment</button>
     <br />
-    Search previous comments:
+    Search comments:
     <input type="text" v-model="searchFilter" />
     <br />
+    _______________________________________________
+
     <div v-for="comment in filterBy(tournament.tournament_comments, searchFilter, 'content')">
-      <!-- {{ comment.created_at }} -->
+      <!-- |||| {{ comment.created_at }} |||| -->
       {{ comment.content }}
+      <br />
+      ________________________________________________
       <br />
       <br />
     </div>
@@ -80,19 +84,13 @@ export default {
       newCommentContent: "",
       testCityOne: "",
       searchFilter: ""
-      // points_of_interest: {
-      //   1: ["", "", "", ""],
-      //   2: [],
-      //   3: [],
-      //   sortAttribute: "title",
-      //   sortAscending: 1,
     };
   },
   mounted: function() {
     axios.get("/api/tournaments/" + this.$route.params.id).then(response => {
       this.tournament = response.data;
 
-      mapboxgl.accessToken = "";
+      mapboxgl.accessToken = process.env.VUE_APP_MY_API_KEY;
 
       var monument = this.tournament.coordinates.split(", ");
       console.log(monument);

@@ -1,6 +1,9 @@
 import Vue from "vue";
 import Vue2Filters from "vue2-filters";
+import TextHighlight from "vue-text-highlight";
+
 Vue.use(Vue2Filters);
+Vue.component("text-highlight", TextHighlight);
 
 import App from "./App.vue";
 import router from "./router";

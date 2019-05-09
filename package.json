@@ -13,6 +13,7 @@
     "video.js": "^7.5.4",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
+    "vue-text-highlight": "^2.0.2",
     "vue2-filters": "^0.6.0"
   },
   "devDependencies": {
